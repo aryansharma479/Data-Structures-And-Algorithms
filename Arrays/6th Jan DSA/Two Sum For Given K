@@ -1,1 +1,23 @@
+//Better Approach
+#include<iostream>
+#include<map>
+#include<bits/stdc++.h>
+using namespace std;
+string read(int n, vector<int> book, int target)
+{
+    map<int,int>mpp;
+    for(int i=0;i<n;i++)
+    {
+        int first_element=book[i];
+        int required_more= target-first_element;
+        if(mpp.find(required_more)!=mpp.end())
+        {
+            return "YES"; //return {mpp[required_more],i}
+        }
+        else {
+        mpp[first_element] = i;
+        }
+    }
+    return "NO";
+}
 
