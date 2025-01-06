@@ -16,3 +16,16 @@ long long maxSubarraySum(vector<int> arr, int n) {
 
     return max_sum;
 }
+                                                 //OR FOR HANDLING NEGATIVE MAXSUM 
+//long long current_sum = 0;
+    //long long max_sum = LLONG_MIN; // Initialize to the smallest possible value
+
+    //for (int i = 0; i < n; i++) {
+       // current_sum += arr[i];
+       // max_sum = max(max_sum, current_sum); // Update max_sum to include the current subarray
+      //  if (current_sum < 0) {
+            //current_sum = 0; // Reset current_sum if it becomes negative
+       // }
+   // }
+
+   // return max_sum;
