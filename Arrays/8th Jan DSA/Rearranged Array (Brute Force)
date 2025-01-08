@@ -10,20 +10,28 @@ int pos[3];
 int neg[3];
 int positive_count=0;
 int negative_count=0;
+cout<<"The Original Array Is:"<<endl;
+for(i=0;i<6;i++)
+{
+    cout<<arr[i]<<" ";
+}
+cout<<endl;
 for(i=0;i<n;i++)
 {
     if(arr[i]>0)
     {   
-        cout<<"posive no. is "<<pos[i]<<endl;
+        
         pos[positive_count]=arr[i];
+        cout<<"posive no. is "<<pos[positive_count]<<endl;
         positive_count++;
         
         
     }
     if(arr[i]<0)
     {   
-        cout<<"negative no. is "<<neg[i]<<endl;
+        
         neg[negative_count]=arr[i];
+        cout<<"negative no. is "<<neg[negative_count]<<endl;
         negative_count++;
         
         
