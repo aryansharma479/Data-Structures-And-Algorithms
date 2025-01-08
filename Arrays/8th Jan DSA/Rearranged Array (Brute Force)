@@ -1,0 +1,56 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+cout<<endl;
+int n=6;
+int i;
+int arr[6]={3,1,-2,-5,2,-4};
+int pos[3];
+int neg[3];
+int positive_count=0;
+int negative_count=0;
+for(i=0;i<n;i++)
+{
+    if(arr[i]>0)
+    {   
+        cout<<"posive no. is "<<pos[i]<<endl;
+        pos[positive_count]=arr[i];
+        positive_count++;
+        
+        
+    }
+    if(arr[i]<0)
+    {   
+        cout<<"negative no. is "<<neg[i]<<endl;
+        neg[negative_count]=arr[i];
+        negative_count++;
+        
+        
+    }
+}
+cout<<"Positive Array Is: "<<endl;
+for(i=0;i<3;i++)
+{
+    cout<<pos[i]<<" ";
+}
+cout<<endl; 
+cout<<"Negative Array Is: "<<endl;
+for(i=0;i<3;i++)
+{
+    cout<<neg[i]<<" ";
+}
+cout<<endl;
+for(i=0;i<3;i++)
+{
+    arr[2*i]=pos[i];
+    arr[(2*i)+1]=neg[i];
+}
+cout<<"The Rearranged Array Is:"<<endl;
+for(i=0;i<6;i++)
+{
+    cout<<arr[i]<<" ";
+}
+return 0;
+cout<<endl;
+}
