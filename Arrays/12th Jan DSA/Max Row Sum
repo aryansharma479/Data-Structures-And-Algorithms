@@ -1,0 +1,13 @@
+int getMaxRowSum(int mat[][3],int rows,int cols)
+{
+  MaxRowSum=INT_MIN;
+  for(int i=0;i<rows;i++)
+  { int RowSum_i=0;
+    for(int j=0;j<cols;j++)
+    {
+      RowSum_i+=mat[i][j];
+    }
+    MaxRowSum=max(MaxRowSum,RowSum_i);
+  }
+  return MaxRowSum;
+}
