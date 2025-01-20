@@ -1,0 +1,44 @@
+vector<int> spiralMatrix(vector<vector<int>>&mat) {
+    // Write your code here.
+    vector<int>ans;
+    int n=mat.size(); // no.of rows
+    int m=mat[0].size(); // no.of colums
+    int left=0;
+    int right=m-1;
+    int bottom=n-1;
+    int top=0;
+    while(top<=bottom && left<=right)
+    {
+        //from left to right (Top Boundary)
+        for(int i=left;i<=right;i++)
+        {
+            ans.push_back(mat[top][i]); //top remains constant
+        }
+        top++;
+        //from top to bottom (Right Boundary)
+        for(int i=top;i<=bottom;i++)
+        {
+            ans.push_back(mat[i][right]); //right remains const
+        }
+        right--;
+        if(top<=bottom)
+        {
+            //from right to left (Bottom Boundary)
+            for(int i=right;i>=left;i--)
+            {  
+                ans.push_back(mat[bottom][i]); // bottom row is const and backwards column traversal
+            }
+            bottom--;
+        }
+        if(left<=right)
+        {
+            //from bottom to top (Left Boundary)
+            for(int i=bottom;i>=top;i--)
+            {
+                ans.push_back(mat[i][left]); //bottom till top and left remains const
+            }
+            left++;
+        }
+    }
+    return ans;
+}
